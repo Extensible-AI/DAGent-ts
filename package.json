@@ -1,0 +1,35 @@
+{
+  "name": "dagent-ts",
+  "version": "0.0.1",
+  "description": "DAGent - Directed Acyclic Graphs (DAGs) as AI Agents",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParthSareen/DAGent-ts.git"
+  },
+  "keywords": [
+    "AI",
+    "Agents",
+    "LLM",
+    "Ollama",
+    "llama",
+    "DAG",
+    "graphs",
+    "graph-agent"
+  ],
+  "author": "Parth Sareen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParthSareen/DAGent-ts/issues"
+  },
+  "homepage": "https://github.com/ParthSareen/DAGent-ts#readme",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.2"
+  }
+}
