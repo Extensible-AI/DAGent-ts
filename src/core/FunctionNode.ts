@@ -33,7 +33,7 @@ class FunctionNode implements BaseNode {
         return Promise.resolve();
     }
 
-    execute(context: any): Promise<any> {
+    run(context: any): Promise<any> {
         console.log('Executing function with context:', context);
         return Promise.resolve(this.func(context));
     }

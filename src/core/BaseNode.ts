@@ -1,5 +1,5 @@
 interface BaseNode {
-    execute(context: any): Promise<any>;
+    run(context: any): Promise<any>;
     compile(forceLoad: boolean): Promise<void>;
 }
 
