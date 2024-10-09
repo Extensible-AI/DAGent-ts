@@ -54,10 +54,17 @@ async function testOllamaLLM() {
         ], // Assuming tools is optional and can be an empty array
     };
 
+    // Function to multiply two numbers
+    function multiply(a: number, b: number): number {
+        return a * b;
+    }
+
     try {
-        const response = await ollamaLLM.call_tools(params);
-        console.log('Response from OllamaLLM:', response.choices[0].message.content);
-        console.log('Tool calls from OllamaLLM:', response.choices[0].message.tool_calls);
+        // const response = await ollamaLLM.call_tools(params);
+        // console.log('Response from OllamaLLM:', response.choices[0].message.content);
+        // console.log('Tool calls from OllamaLLM:', response.choices[0].message.tool_calls);
+        const toolDesc = await ollamaLLM.generateToolDescription('llama3.2', multiply.toString());
+        console.log('Tool description from OllamaLLM:', toolDesc);
     } catch (error) {
         console.error('Error calling OllamaLLM:', error);
     }

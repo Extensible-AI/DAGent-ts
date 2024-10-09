@@ -1,10 +1,9 @@
 import OpenAILLM from '../src/llm/OpenAILLM';
-import { ChatRequest } from 'ollama';
+import { LLMParams } from '../src/types/LLMInterfaces';
 
 async function testOpenAILLM() {
-    const openAILLM = new OpenAILLM();
-    const params: ChatRequest = {
-        model: 'gpt-4o', // Using the model specified in OpenAILLM
+    const openAILLM = new OpenAILLM('gpt-4o');
+    const params: LLMParams = {
         messages: [
             { role: 'user', content: 'tell me how you are doing.' },
         ],

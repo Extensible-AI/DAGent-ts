@@ -1,9 +1,9 @@
 import BaseNode from "./BaseNode";
 
 class FunctionNode implements BaseNode {
-    private func: (...args: any[]) => any;
-    private nextNodes: Map<string, BaseNode>;
-    private compiled: boolean = false;
+    public func: (...args: any[]) => any;
+    public nextNodes: Map<string, BaseNode>;
+    public compiled: boolean = false;
 
     constructor(func: (...args: any[]) => any) {
         this.func = func;
