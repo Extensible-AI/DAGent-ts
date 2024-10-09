@@ -69,7 +69,7 @@ export class DecisionNode implements BaseNode {
     private async makeDecision(input: any): Promise<string> {
         // TODO: Implement LLM call to make decision
         // This should use the LLMProvider to call the LLM and interpret the response
-        const llmResponse = await this.llmProvider.call({
+        const llmResponse = await this.llmProvider.call_tools({
             messages: [{ role: 'user', content: JSON.stringify(input) }],
             tools: this.toolDescriptions
         });
